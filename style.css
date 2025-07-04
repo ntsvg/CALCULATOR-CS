@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Cagliostro&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cagliostro', 'Libre Caslon Text', 'Open Sans', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    background: linear-gradient(45deg, #54f7f7, #dcb8ff);
+}
+.calculator{
+    position: relative;
+    border: 2px solid black;
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    border-radius: 18px;
+    background: transparent;
+    box-shadow: 0px 3px 15px #54f7f7;
+    width: 400px;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    width: 100%;
+    border: none;
+    padding: 16px;
+    margin: 10px;
+    margin-bottom: 12px;
+    border: none;
+    background: transparent;
+    box-shadow: 0px 3px 15px #54f7f7;
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+}
+.input::placeholder{
+    color: black;
+}
+button{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(90, 252, 252, 0.4);
+    cursor: pointer;
+}
+.equal{
+    background: linear-gradient(45deg, #dcb8ff, #54f7f7);
+    box-shadow: -8px -8px 15px rgba(90, 252, 252, 0.7);
+}
+.operators{
+    color: rgb(127, 0, 245);
+}
+.watermark{
+    color: black;
+    position: relative;
+    left: -30vw;
+    top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Libre Caslon Text', serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 10px;
+    animation: typing 2s steps(30, end),
+    blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+.watermark:hover{
+    display: block;
+    color: black;
+    transition: 2s ease;
+    border: 0.1px solid black;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 400px) {
+  input {
+    font-size: 24px;
+    padding: 12px;
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .calculator {
+    padding: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .calculator {
+    width: 90%;
+    max-width: none;
+  }
+
+  input {
+    font-size: 32px;
+    padding: 14px;
+  }
+
+  button {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+}
